@@ -48,7 +48,7 @@ Some fun learning things about this, for me...
 
     From skimming, `docker-compose up` sets up networking that `docker-compose run` doesn't. The `run` apparently, is really made for quick one-off access to the container. But this is fine for my purposes. 
 
-- The `--rm` in `docker-compose run --rm shell` makes the container disappear as soon as you exit from the interactive bash session. But that's ok, cuz it's super-quick to start up, and any work you've done in the `code_on_container` directory persists, because of the volume setup.
+- The `--rm` in `docker-compose run --rm shell` makes the container disappear as soon as you exit from the interactive bash session. But that's ok, cuz it's super-quick to start up, and any work you've done in the `code_on_container` directory persists, because of the volume setup. Note, after I exit from the shell, I still run `docker-compose down` to clean up the 'network' that the docker-compose file creates (maybe there's a way to eliminate the creation, since I don't need it).
 
 - Finally, just a note that the "shell" in `docker-compose run --rm shell` defines the 'service' you want access to (I have a "shell" service defined in the docker-compose file) -- so if I had a django-service and a solr-service defined in the docker-compose file, I could specify which service I wanted access to in the `run` command. (Just clarifying that the `shell` in the run command is not really directly related to the fact that I end up in bash.)
 
