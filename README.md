@@ -38,7 +38,7 @@ Some fun learning things about this, for me...
 
     The canonical way to get rust installed on linux is: 
 
-        RUN curl --proto '=https' --tlsv1.2 -sSf -t 0 https://sh.rustup.rs | sh` 
+        RUN curl --proto '=https' --tlsv1.2 -sSf -t 0 https://sh.rustup.rs | sh 
 
     However, that gives you interactive prompts, which I didn't want for the Dockerfile.
 
