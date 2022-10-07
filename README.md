@@ -24,6 +24,8 @@ With our docker experimentation, I wanted to try this via docker.
 
     This builds the image, if necessary, then creates a container, and then puts you into bash (in the container, in the `code_on_container` container directory (which is mapped to yor `code_on_laptop` directory).
 
+- to confirm you have rust installed: `rustc -V`
+
 ---
 
 ### Notes...
