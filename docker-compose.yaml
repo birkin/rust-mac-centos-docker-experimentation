@@ -1,0 +1,18 @@
+## version: "3.9"
+
+services:
+  shell:
+    build: .
+    image: centos_with_rust
+    container_name: centos-container
+    volumes:
+      - ../code_on_laptop:/stuff_on_container/code_on_container
+      - ../code_on_laptop:/stuff_on_container/logs_on_container
+
+    environment:          # placeholder
+      - FOO_KEY=bar_val
+    
+    # stdin_open: true    # docker run -i
+    # tty: true           # docker run -t
+
+    entrypoint: /bin/bash
